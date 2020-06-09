@@ -13,14 +13,26 @@ function Hi(){
        <li>Muhammad Usman</li>
        <li>Muhammad Ali</li>
        {5+10}
-       <App  name="haseeb"age="12"/>
-       <MediaCard p={"Hello everyone"} h1={"now passing h1"} sorce={logo}/>
 
+         <Condition check={true} />
+       <App  name="haseeb"age="14"/>
+        <MediaCard p={"Hello everyone"} h1={"now passing h1"} sorce={logo}/> 
+              
 
      </ul>
    </div>
  );
 }
+function Condition({chec}){
+  if(chec){
+    return <h1>hi boss it's true</h1>
+  }
+  else{
+    return <h1>hi boss it's false </h1>
+    
+  }
+}
+
 let App=({name,age})=>(
      <div>
        <h1>{name}</h1>
@@ -36,6 +48,7 @@ let App=({name,age})=>(
   <img src={sorce} alt="Haseeb"/>
       </div>
   )
+ 
   
 
 export default Hi;
