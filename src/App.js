@@ -1,54 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-function Hi(){
- return(
-   <div>
-     <strong>
-       Hello  World
-     </strong>
-     <h1>Muhammad Ahmad</h1>
-     <ul>
-       <li>Muhammad Abubakar</li>
-       <li>Muhammad                Umer</li>
-       <li>Muhammad Usman</li>
-       <li>Muhammad Ali</li>
-       {5+10}
+import React  from 'react';
 
-         <Condition check={true} />
-       <App  name="haseeb"age="14"/>
-        <MediaCard p={"Hello everyone"} h1={"now passing h1"} sorce={logo}/> 
-              
-
-     </ul>
-   </div>
- );
-}
-function Condition({chec}){
-  if(chec){
-    return <h1>hi boss it's true</h1>
-  }
-  else{
-    return <h1>hi boss it's false </h1>
-    
-  }
-}
-
-let App=({name,age})=>(
-     <div>
-       <h1>{name}</h1>
-        <h1>{age}</h1> 
-
-     </div>
+function App(){
+  return(
+     <LightHooking />
   );
+}
+let LightHooking= ()=>{
+  const [isLit, setLit] = React.useState(true);
+  let ch;
+       if(isLit){
+         ch=<h1>true</h1>   
+       }
+       else{
+         ch=<h1>
+           false
+         </h1>
+       }
+       return(
+        <div>
+       <h1>the light is {ch}</h1>
+       <button onClick={() => setLit(!isLit)} >click</button>
+       </div>
+       
+       );
+                 
+}
 
-  let MediaCard=({p,h1,sorce})=>(
-      <div>
-        <p>{p}</p>
-  <h1>{h1}</h1>
-  <img src={sorce} alt="Haseeb"/>
-      </div>
-  )
- 
-  
-
-export default Hi;
+export default App;
