@@ -1,0 +1,23 @@
+.Room{
+    height: 100vh;
+    margin: 0px;
+}
+.Light{
+    background-color: white;
+    color: black;
+}
+.Dark{
+    background-color: black;
+    color: white;
+    
+  
+}
+
+.wholealign{
+    text-align: center; 
+}
+
+.numberbdecrease{
+    display: inline-block;
+   margin-left: 20px;
+}
