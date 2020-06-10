@@ -19,7 +19,7 @@ function RoomLight(){
         <p >Appearance of Page {light} </p>
             <button onClick={()=>setLight(!isLight)}>Change Color</button>
             
-    <p>Temprature is {light?"22":"56"}<sup>c</sup></p>
+    <p>Temprature is {isLight ? 56:22}<sup>c</sup></p>
    
            <h3>IF YOU ARE FREE YOU CAN PLAY THE GAME OF NUMBERS.</h3>
     <h1>Number is {currentNumber}</h1>
